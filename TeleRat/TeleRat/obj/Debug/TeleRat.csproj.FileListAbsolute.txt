@@ -1,0 +1,82 @@
+D:\VS 2017 Projects\TeleRat\TeleRat\obj\Debug\TeleRat.csprojAssemblyReference.cache
+D:\VS 2017 Projects\TeleRat\TeleRat\obj\Debug\TeleRat.csproj.CoreCompileInputs.cache
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\TeleRat.exe.config
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\TeleRat.exe
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\TeleRat.pdb
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\AForge.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\AForge.Video.DirectShow.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\AForge.Video.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\EntityFramework.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\NetTelegramBotApi.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.EF6.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.Linq.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\EntityFramework.xml
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.xml
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.dll.config
+D:\VS 2017 Projects\TeleRat\TeleRat\obj\Debug\TeleRat.csproj.CopyComplete
+D:\VS 2017 Projects\TeleRat\TeleRat\obj\Debug\TeleRat.exe
+D:\VS 2017 Projects\TeleRat\TeleRat\obj\Debug\TeleRat.pdb
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\Newtonsoft.Json.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\Newtonsoft.Json.xml
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\DotNetZip.dll
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\DotNetZip.pdb
+D:\VS 2017 Projects\TeleRat\TeleRat\bin\Debug\DotNetZip.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\obj\Debug\TeleRat.csprojAssemblyReference.cache
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\obj\Debug\TeleRat.csproj.CoreCompileInputs.cache
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\obj\Debug\TeleRat.exe
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\obj\Debug\TeleRat.pdb
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\TeleRat.exe.config
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\TeleRat.exe
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\TeleRat.pdb
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\DotNetZip.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\EntityFramework.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\Newtonsoft.Json.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\DotNetZip.pdb
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\DotNetZip.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\EntityFramework.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\Newtonsoft.Json.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\obj\Debug\TeleRat.csproj.CopyComplete
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x64\concrt140.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x64\cvextern.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x64\msvcp140.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x64\opencv_videoio_ffmpeg411_64.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x64\vcruntime140.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x86\concrt140.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x86\cvextern.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x86\msvcp140.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\x86\vcruntime140.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\Emgu.CV.UI.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\Emgu.CV.World.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\NAudio.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\NetTelegramBotApi.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\SharpAvi.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\ZedGraph.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\Emgu.CV.UI.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\Emgu.CV.World.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\NAudio.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\SharpAvi.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\ZedGraph.xml
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\zh-tw\ZedGraph.resources.dll
