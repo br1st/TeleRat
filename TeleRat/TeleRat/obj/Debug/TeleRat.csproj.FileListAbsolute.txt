@@ -80,3 +80,6 @@ C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\sv\ZedGraph.reso
 C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\tr\ZedGraph.resources.dll
 C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\xNet.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\RestSharp.dll
+C:\Users\br1st\Desktop\GITHUB\TeleRat\TeleRat\TeleRat\bin\Debug\RestSharp.xml

