@@ -48,3 +48,4 @@ TODO List:
 9. <strike>Recode /GetGooglePassword.</strike>
 10. <strike>Make a /GetGPSLocation.</strike>
 11. Make a capturing video from WebCam.
+12. GetProviderData func

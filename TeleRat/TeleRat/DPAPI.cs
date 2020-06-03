@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.IO;
-using System.Data.SQLite;
-using System.Data;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
 
