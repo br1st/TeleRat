@@ -113,6 +113,7 @@
     <Compile Include="ProviderData.cs" />
     <Compile Include="SimpleJSON.cs" />
     <Compile Include="TelegramSystem.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

