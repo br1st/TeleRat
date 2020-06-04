@@ -18,7 +18,7 @@ Commands:<br>
 /GetCookieFile - get cookies from browsers<br>
 /GetSystem - get system specs<br>
 /GetProcess - get tasklist<br>
-/GetProviderData - get provider data (city, region, country etc)
+/GetProviderData - get provider data (city, region, country etc)<br>
 /KillProcess|process name - kill process<br>
 /ls|path - get files and folders in path<br>
 To upload update you need to attach update with caption "/UploadUpdate"<br>
