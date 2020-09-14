@@ -10,7 +10,7 @@ namespace Botnet
 
         static Utilities()
         {
-            string json = File.ReadAllText("Config.json");                       // config.appData + "\\Bot\\Config.json"
+            string json = File.ReadAllText(config.appData + "\\Bot\\Config.json");                       // config.appData + "\\Bot\\Config.json"
             var data = JsonConvert.DeserializeObject<dynamic>(json);
             alerts = data.ToObject<Dictionary<string, string>>();
         }

